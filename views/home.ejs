@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+    <h1>contact list</h1>
+    <div>
+        <ul>
+            <% for(let i of contact_list){%>
+                <li>
+                    <p><%=i.naam%></p>
+                    <p><%=i.phone%></p>
+                </li>
+            <%}%>
+        </ul>
+    </div>
+    <form action="/createList" method="POST">
+        <input type="text" name="naam" placeholder="enter name" required>
+        <input type="number" name="phone" placeholder="enter number" required>
+        <button type="submit">add contact</button>
+    </form>
+</body>
+</html>
