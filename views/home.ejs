@@ -9,23 +9,35 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <i class="fa-solid fa-address-book"></i>
-    <h1 id="page-heading">My Contact List</h1>
+    <header>
+        <div id="heading">
+            <i class="fa-solid fa-address-book"></i>
+            <h1 id="page-heading">&nbsp; &nbsp; My Contact List</h1>
+        </div>
+    </header>
     <div>
         <ul>
             <% for(let i of contact_list){%>
                 <li>
-                    <p><%=i.naam%></p>
-                    <p><%=i.phone%></p>
+                    <div id="detail">
+                        <div id="name">
+                            <p><%=i.naam%></p>
+                        </div>
+                        <div id="phone">
+                            <p><%=i.phone%></p>
+                        </div>
+                    </div>
                 </li>
             <%}%>
         </ul>
     </div>
-    <form action="/createList" method="POST">
-        <input type="text" name="naam" placeholder="enter name" required>
-        <input type="number" name="phone" placeholder="enter number" required>
-        <button type="submit">add contact</button>
-    </form>
+    <div id="form">
+        <form action="/createList" method="POST">
+            <input type="text" name="naam" placeholder="enter name" required>
+            <input type="number" name="phone" placeholder="enter number" required>
+            <button type="submit">add contact</button>
+        </form>
+    </div>
     <script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>

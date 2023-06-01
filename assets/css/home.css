@@ -2,7 +2,50 @@ body{
     margin: 0%;
 }
 #page-heading{
-    text-align: center;
     margin-top: 25px;
-    color: darkgray;
+    color: rgb(68, 57, 57);
+    display: inline-block;
+}
+.fa-solid{
+    display: inline-block;
+    font-size: 30px;
+}
+#heading{
+    
+    margin: auto;
+    width: fit-content;
+}
+ul{
+    list-style-type: none;
+}
+#name{
+    width: 150px;
+    display: inline-block;
+}
+#phone{
+    width: 170px;
+   
+    display: inline-block;
+
+}
+#detail{
+    padding-left: 2px;
+    margin: auto;
+    margin-bottom: 5px;
+    width: fit-content;
+    border-radius: 7px;
+    width: fit-content;
+    background-color: rgb(119, 197, 225);
+    transition: 0.2s ease-in-out;
+}
+#detail:hover{
+    background-color: rgb(69, 143, 199);
+}
+p{
+    text-align: center;
+}
+#form{
+    margin: auto;
+    margin-top: 20px;
+    width: fit-content;
 }
