@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
+    <script src="https://kit.fontawesome.com/fb030a63a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>contact list</h1>
+    <i class="fa-solid fa-address-book"></i>
+    <h1 id="page-heading">My Contact List</h1>
     <div>
         <ul>
             <% for(let i of contact_list){%>
@@ -23,5 +26,6 @@
         <input type="number" name="phone" placeholder="enter number" required>
         <button type="submit">add contact</button>
     </form>
+    <script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>

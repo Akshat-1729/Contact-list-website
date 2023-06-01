@@ -23,7 +23,17 @@ var contactList=[
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'))
 app.use(express.urlencoded());
-
+app.use(express.static('assets'))
+// middleware1
+// app.use(function(req,res,next){
+//     req.myname="akshat";
+//     next();
+// });
+// middleware2
+// app.use(function(req,res,next){
+//     console.log("my name from mw2:",req.myname);
+//     next();
+// });
 app.get('/',function(req,res){
     return res.render('home',{title:"Contact list",contact_list:contactList});
 });
