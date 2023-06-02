@@ -43,6 +43,15 @@ app.get('/practice',function(req,res){
     return res.render('main',{title:"demo"});
 });
 
+app.get('/delete-contact/:phone',function(req,res){
+    console.log(req.params);
+    let phone=req.params.phone;
+    let contact_Index=contactList.findIndex(contact=>contact.phone==phone);
+    if(contact_Index!=-1){
+        contactList.splice(contact_Index,1); 
+    }
+    return res.redirect('/')
+})
 
 app.post('/createList',function(req,res){
     contactList.push({
