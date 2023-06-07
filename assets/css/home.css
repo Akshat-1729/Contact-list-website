@@ -35,17 +35,20 @@ ul{
     height: 50px;
     padding-left: 2px;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     width: fit-content;
     border-radius: 7px;
     width: fit-content;
     background-color: rgb(74, 31, 182);
     transition: 0.2s ease-in-out;
-    box-shadow: 0px 0px 10px 0.5px white;
+    box-shadow: 0px 0px 10px 0.5px rgb(241, 203, 255);
     border: 2.7px solid rgb(54, 20, 141);
 }
 #detail:hover{
-    background-color: rgb(69, 143, 199);
+    background-color: rgb(56, 20, 147);
+    border: 2.7px solid rgb(37, 12, 99);
+    box-shadow: 0px 0px 10px 3px whitesmoke;
+    transform: scale(1.02);
 }
 p{
     text-align: center;
@@ -65,4 +68,29 @@ p{
 .fa-address-book{
     font-size: 30px;
     color: rgb(108, 213, 255);
+}
+.fa-rectangle-xmark{
+    transition: 0.2s ease-in-out;
+}
+.fa-rectangle-xmark:hover{
+    color: rgb(255, 0, 0);
+}
+#form input{
+    height: 30px;
+    font-size: medium;
+    padding-left: 5px;
+    width: 160px;
+    margin-left: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(188, 36, 66);
+    border-top: 2px solid rgb(235, 154, 240);
+    border-left:2px solid rgb(208, 93, 214) ;
+    border-right: 2px solid rgb(214, 66, 153);
+    border-bottom: 2px solid rgb(183, 39, 84);
+}
+#form input::placeholder{
+    color: aliceblue;
 }
