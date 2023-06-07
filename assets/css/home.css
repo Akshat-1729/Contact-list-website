@@ -1,14 +1,18 @@
 body{
     margin: 0%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(216, 13, 13),black);
 }
 #page-heading{
     margin-top: 25px;
-    color: rgb(68, 57, 57);
+    color: rgb(254, 251, 251);
     display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .fa-solid{
     display: inline-block;
     font-size: 20px;
+    color: rgb(208, 0, 0);
 }
 #heading{
     
@@ -31,25 +35,34 @@ ul{
     height: 50px;
     padding-left: 2px;
     margin: auto;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     width: fit-content;
     border-radius: 7px;
     width: fit-content;
-    background-color: rgb(119, 197, 225);
+    background-color: rgb(74, 31, 182);
     transition: 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px 0.5px white;
+    border: 2.7px solid rgb(54, 20, 141);
 }
 #detail:hover{
     background-color: rgb(69, 143, 199);
 }
 p{
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 250, 222);
 }
 #form{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 25px;
     width: fit-content;
 }
 .delete{
     display: inline-block;
     margin-right: 10px;
+    vertical-align: middle;
+}
+.fa-address-book{
+    font-size: 30px;
+    color: rgb(108, 213, 255);
 }
