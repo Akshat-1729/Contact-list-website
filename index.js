@@ -36,32 +36,53 @@ app.use(express.static('assets'))
 //     console.log("my name from mw2:",req.myname);
 //     next();
 // });
-app.get('/',function(req,res){
-    return res.render('home',{title:"Contact list",contact_list:contactList});
-});
+app.get('/', function(req, res) {
+    Contact.find({})
+      .then(function(contacts) {
+        return res.render('home', { title: "Contact list", contact_list: contacts });
+      })
+      .catch(function(err) {
+        console.log('error in fetching contacts from db', err);
+        return;
+      });
+  });
+  
+  
 
 
 app.get('/practice',function(req,res){
     return res.render('main',{title:"demo"});
 });
 
-app.get('/delete-contact/:phone',function(req,res){
+app.get('/delete-contact', function(req, res) {
     console.log(req.params);
-    let phone=req.params.phone;
-    let contact_Index=contactList.findIndex(contact=>contact.phone==phone);
-    if(contact_Index!=-1){
-        contactList.splice(contact_Index,1); 
-    }
-    return res.redirect('/')
-})
+    let id = req.query.id;
 
-app.post('/createList',function(req,res){
-    contactList.push({
-        naam:req.body.naam,
-        phone:req.body.phone
-    });
-    return res.redirect('/');
+    Contact.findByIdAndDelete(id)
+        .then(function() {
+            return res.redirect('/');
+        })
+        .catch(function(err) {
+            console.log("Can't delete from db", err);
+            return;
+        }); 
 });
+
+app.post('/createList', function(req, res) {
+    Contact.create({
+      name: req.body.naam,
+      phone: req.body.phone
+    })
+      .then(newContact => {
+        console.log('*********', newContact);
+        return res.redirect('back');
+      })
+      .catch(err => {
+        console.log("error in creating a contact", err);
+        return res.redirect('back');
+      });
+  });
+  
 
 
 app.listen(port,function(err){

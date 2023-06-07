@@ -8,7 +8,7 @@ body{
 }
 .fa-solid{
     display: inline-block;
-    font-size: 30px;
+    font-size: 20px;
 }
 #heading{
     
@@ -24,11 +24,11 @@ ul{
 }
 #phone{
     width: 170px;
-   
     display: inline-block;
 
 }
 #detail{
+    height: 50px;
     padding-left: 2px;
     margin: auto;
     margin-bottom: 5px;
@@ -48,4 +48,8 @@ p{
     margin: auto;
     margin-top: 20px;
     width: fit-content;
+}
+.delete{
+    display: inline-block;
+    margin-right: 10px;
 }
